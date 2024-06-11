@@ -1,6 +1,8 @@
 # Phân loại Âm nhạc Truyền thống Việt Nam
 
-Dự án cá nhân này tập trung vào việc phân loại các thể loại âm nhạc truyền thống Việt Nam dựa trên các đặc trưng âm sắc như Spectral Centroid, Rolloff, Flux, Zero Crossing, Low Energy và MFCC. Dự án được hoàn thành vào ngày 10/06/2024.
+- Dự án cá nhân này tập trung vào việc phân loại các thể loại âm nhạc truyền thống Việt Nam
+- Dựa trên các đặc trưng âm sắc như Spectral Centroid, Rolloff, Flux, Zero Crossing, Low Energy và MFCC.
+- Hoàn thành 10/06/2024.
 
 ## Mục lục
 - [Giới thiệu](#giới-thiệu)
@@ -10,7 +12,8 @@ Dự án cá nhân này tập trung vào việc phân loại các thể loại �
 - [Tham khảo](#tham-khảo)
 
 ## Giới thiệu
-Dự án này nhằm xây dựng một mô hình máy học để phân loại các thể loại âm nhạc truyền thống Việt Nam bao gồm: Cailuong, Catru, Chauvan, Cheo, và Xam. Chúng tôi sử dụng các thư viện Python để xử lý âm thanh và học máy như librosa để trích xuất đặc trưng và TensorFlow/Keras để xây dựng và huấn luyện mô hình.
+- Dự án này nhằm xây dựng một mô hình máy học để phân loại các thể loại âm nhạc truyền thống Việt Nam bao gồm: Cailuong, Catru, Chauvan, Cheo, và Xam.
+- Chúng tôi sử dụng các thư viện Python để xử lý âm thanh và học máy như librosa để trích xuất đặc trưng và TensorFlow/Keras để xây dựng và huấn luyện mô hình.
 
 ## Cài đặt
 Để thiết lập dự án này, bạn cần cài đặt Python 3.6+ và các thư viện cần thiết sau:
@@ -21,13 +24,13 @@ Dự án này nhằm xây dựng một mô hình máy học để phân loại c
    cd project
 2. Cài đặc thư viện
 pip install -r requirements.txt
-3. Quá trình thực hiện
+## Quá trình thực hiện
 - Chuẩn bị dữ liệu
 - Trích xuất đặc trưng
 - Huấn luyện mô hình
 - Đánh giá
 - Dự đoán thể loại
-Chi tiết được hiện trong file ,
+Chi tiết được hiện trong file ,Audi_Training.ipynb
 ## Tham khảo
 [1] LTPhat/ Phân loại Việt-Truyền thống-Âm nhạc-Phân loại, https://github.com/LTPhat/Vietnamese-Traditional-Music-Classification
 
