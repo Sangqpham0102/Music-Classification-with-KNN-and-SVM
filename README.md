@@ -20,3 +20,7 @@ Dự án này nhằm xây dựng một mô hình máy học để phân loại c
    ```bash
    git clone https://github.com/yourusername/music-genre-classification.git
    cd music-genre-classification
+2. Cài đặc thư viện
+pip install -r requirements.txt
+
+4. 
