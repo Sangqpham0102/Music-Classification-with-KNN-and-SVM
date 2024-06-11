@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"> <!-- Thiết lập mã hóa ký tự -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Thiết lập viewport để hỗ trợ responsive -->
+    <title>Phân loại âm thanh</title> <!-- Tiêu đề trang -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Đường dẫn tới thư viện font-awesome -->
+    <style>
+        body { /* Thiết lập cho phần body */
+            font-family: sans-serif; /* Chọn font chữ cho trang */
+            background-image: url("static/bg7.jpg"); /* Đường dẫn tới ảnh nền */
+            background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ phần tử */
+           
+            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+            color: #333; /* Màu chữ */
+            margin: 0; /* Bỏ khoảng cách mặc định của body */
+            padding: 0; /* Bỏ khoảng cách mặc định của body */
+            height: 150vh; /* Chiều cao của body */
+            display: flex; /* Sử dụng Flexbox để căn chỉnh */
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+        }
+
+        h1 { /* Thiết lập cho tiêu đề chính */
+            font-size: 3em; /* Tăng kích thước của tiêu đề chính */
+            font-family: Arial, sans-serif;
+            text-align: center; /* Căn giữa văn bản */
+            color: red; /* Màu chữ */
+        }
+
+        h2 { /* Thiết lập cho tiêu đề phụ */
+            color: #007bff; /* Màu chữ */
+        }
+
+        .box { /* Thiết lập cho các hộp chứa */
+            width: 100%; /* Chiều rộng của hộp */
+            margin-bottom: 20px; /* Khoảng cách dưới của hộp */
+        }
+
+        .image-container { /* Thiết lập cho container hình ảnh */
+            display: flex; /* Sử dụng Flexbox để căn chỉnh */
+            justify-content: space-around; /* Khoảng cách giữa các hình ảnh */
+            margin-bottom: 20px; /* Khoảng cách dưới của container */
+        }
+
+        .image-container img { /* Thiết lập cho các hình ảnh */
+            width: 200px; /* Chiều rộng của hình ảnh */
+            border-radius: 10px; /* Bo tròn góc hình ảnh */
+            margin-right: 20px; /* Khoảng cách giữa các hình ảnh */
+            cursor: pointer; /* Con trỏ chuột biến thành pointer khi di chuột qua */
+        }
+
+        #upload-container { /* Thiết lập cho container tải lên */
+            display: flex; /* Sử dụng Flexbox để căn chỉnh */
+            flex-direction: column; /* Căn chỉnh theo cột */
+            align-items: center; /* Căn giữa theo chiều ngang */
+            margin-bottom: 20px; /* Khoảng cách dưới của container */
+        }
+
+        #upload-input { /* Thiết lập cho input tải lên */
+            display: none; /* Ẩn input */
+        }
+
+        .upload-label { /* Thiết lập cho nhãn tải lên */
+            width: 200px; /* Chiều rộng của nhãn */
+            padding: 10px; /* Đệm trong của nhãn */
+            text-align: center; /* Căn giữa văn bản */
+            background-color: #007bff; /* Màu nền */
+            color: white; /* Màu chữ */
+            border-radius: 5px; /* Bo tròn góc nhãn */
+            cursor: pointer; /* Con trỏ chuột biến thành pointer khi di chuột qua */
+            margin-bottom: 10px; /* Khoảng cách dưới của nhãn */
+        }
+
+        #upload-button { /* Thiết lập cho nút tải lên */
+            padding: 10px 20px; /* Đệm trong của nút */
+            background-color: #28a745; /* Màu nền */
+            color: white; /* Màu chữ */
+            border: none; /* Bỏ viền */
+            border-radius: 5px; /* Bo tròn góc nút */
+            cursor: pointer; /* Con trỏ chuột biến thành pointer khi di chuột qua */
+            font-size: 16px; /* Kích thước chữ */
+        }
+
+        #upload-button:hover { /* Thiết lập cho nút tải lên khi di chuột qua */
+            background-color: #218838; /* Màu nền khi di chuột qua nút */
+        }
+
+        #results-container { /* Thiết lập cho container kết quả */
+            display: flex; /* Sử dụng Flexbox để căn chỉnh */
+            flex-direction: column; /* Căn chỉnh theo cột */
+            align-items: center; /* Căn giữa theo chiều ngang */
+        }
+
+        #classification-label { /* Thiết lập cho nhãn phân loại */
+            font-weight: bold; /* Chữ đậm */
+            margin-bottom: 10px; /* Khoảng cách dưới của nhãn */
+            color: green; /* Màu chữ */
+        }
+
+        #classification-result { /* Thiết lập cho kết quả phân loại */
+            font-size: 16px; /* Kích thước chữ */
+            margin-bottom: 10px; /* Khoảng cách dưới của kết quả */
+        }
+
+        #progress-bar { /* Thiết lập cho thanh tiến trình */
+            width: 200px; /* Chiều rộng của thanh */
+            height: 20px; /* Chiều cao của thanh */
+            background-color: #ccc; /* Màu nền của thanh */
+            border: 1px solid #ddd; /* Viền của thanh */
+            margin-bottom: 10px; /* Khoảng cách dưới của thanh */
+        }
+
+        #progress-bar-fill { /* Thiết lập cho phần đã hoàn thành của thanh tiến trình */
+            width: 0%; /* Chiều rộng ban đầu của phần đã hoàn thành */
+            height: 100%; /* Chiều cao của phần đã hoàn thành */
+            background-color: #007bff; /* Màu nền của phần đã hoàn thành */
+            transition: width 0.5s ease; /* Hiệu ứng chuyển động khi thay đổi chiều rộng */
+        }
+
+        audio { /* Thiết lập cho trình phát âm thanh */
+            margin-top: 20px; /* Khoảng cách trên của trình phát */
+            width: 100%; /* Chiều rộng của trình phát */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phân loại âm nhạc Việt Nam <i class="fas fa-music"></i></h1> <!-- Tiêu đề chính -->
+        <div class="image-container"> <!-- Container chứa hình ảnh -->
+            <img src="static/cailuong.jpg" alt="Cải lương" title="Cải lương"> 
+            <img src="static/catru.jpg" alt="Ca trù" title="Ca trù">
+            <img src="static/chauvan.jpg" alt="Chầu văn" title="Chầu văn"> 
+            <img src="static/cheo.jpg" alt="Chèo" title="Chèo"> 
+            <img src="static/hatxam.jpg" alt="Hát xẩm" title="Hát xẩm"> 
+        </div>
+        <div class="box" id="upload-box"> <!-- Container tải lên âm thanh -->
+            <h2>Tải lên âm thanh <i class="fas fa-upload"></i></h2>
+            <div id="upload-container">
+                <div id="message-container"></div>
+                <label for="upload-input" class="upload-label" id="upload-label"> <!-- Nhãn và input tải lên -->
+                    <i class="fas fa-upload"></i> Chọn tệp âm thanh
+                </label>
+                <input type="file" id="upload-input" accept="audio/*" style="display: none;">
+                <button id="upload-button"><i class="fas fa-paper-plane"></i> Tải lên</button>
+            </div>
+        </div>
+        <div class="box" id="results-box"> <!-- Container hiển thị kết quả -->
+            <h2>Kết quả phân loại <i class="fas fa-info-circle"></i></h2>
+            <div id="results-container">
+                <p id="classification-label">Phân loại</p> <!-- Nhãn phân loại -->
+                <p id="classification-result"></p> <!-- Kết quả phân loại -->
+                <div id="progress-bar"> <!-- Thanh tiến trình -->
+                    <div id="progress-bar-fill"></div> <!-- Phần đã hoàn thành của thanh tiến trình -->
+                </div>
+                <audio id="audio-player" controls></audio> <!-- Trình phát âm thanh -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tạo biến tham chiếu đến các phần tử HTML
+        const uploadInput = document.getElementById('upload-input');
+        const uploadLabel = document.getElementById('upload-label');
+        const uploadButton = document.getElementById('upload-button');
+        const classificationLabel = document.getElementById('classification-label');
+        const classificationResult = document.getElementById('classification-result');
+        const progressBar = document.getElementById('progress-bar');
+        const progressBarFill = document.getElementById('progress-bar-fill');
+        const audioPlayer = document.getElementById('audio-player');
+        const messageContainer = document.getElementById('message-container'); // Thêm dòng này
+
+        // Lắng nghe sự kiện thay đổi của input tải lên
+        uploadInput.addEventListener('change', () => {
+            const files = uploadInput.files;
+            if (files.length > 0) {
+                uploadLabel.textContent = `Tệp đã chọn: ${files[0].name}`;
+            } else {
+                uploadLabel.textContent = 'Chọn tệp âm thanh';
+            }
+        });
+
+        // Lắng nghe sự kiện click trên nút tải lên
+        uploadButton.addEventListener('click', async () => {
+            const file = uploadInput.files[0];
+            if (!file) {
+                return;
+            }
+
+            // Hiển thị thông báo "Đang tải lên..."
+            classificationLabel.textContent = 'Đang tải lên...';
+            classificationResult.textContent = '';
+            progressBarFill.style.width = '0%';
+
+            // Gửi file tới server để phân loại bằng Fetch API
+            const formData = new FormData();
+            formData.append('audioFile', file);
+
+            try {
+                const response = await fetch('/classify', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const predictedGenre = data.genre;
+                    const predictedProbability = data.probability;
+                    const filePath = data.file_path;
+
+                    // Cập nhật kết quả phân loại
+                    classificationLabel.textContent = 'Phân loại:';
+                    classificationResult.textContent = `${predictedGenre} (${predictedProbability.toFixed(2)}%)`;
+                    progressBarFill.style.width = '100%';
+
+                    // Cập nhật trình phát âm thanh
+                    audioPlayer.src = filePath;
+                    audioPlayer.style.display = 'block';
+                    // Thêm dòng thông báo "Tệp đã được tải lên"
+                    messageContainer.innerText = 'Tệp đã được tải lên.'; // Hiển thị thông báo
+                    setTimeout(() =>{
+                        messageContainer.innerText = ''; // Ẩn thông báo sau 3 giây
+                    },3000);
+                } else {
+                    alert('Lỗi phân loại âm thanh. Vui lòng thử lại.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Lỗi phân loại âm thanh. Vui lòng thử lại.');
+            }
+        });
+
+        // Phóng to hình ảnh khi click
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.addEventListener('click', () => {
+                // Tạo một modal để phóng to hình ảnh
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                modal.style.display = 'flex';
+                modal.style.justifyContent = 'center';
+                modal.style.alignItems = 'center';
+                modal.style.zIndex = '9999';
+
+                // Tạo một hình ảnh trong modal
+                const enlargedImage = document.createElement('img');
+                enlargedImage.src = image.src;
+                enlargedImage.style.width = '50vw';
+                enlargedImage.style.height = '50vh';
+                enlargedImage.style.borderRadius = '10px';
+
+                // Đóng modal khi click bên ngoài hình ảnh
+                modal.addEventListener('click', () => {
+                    modal.remove();
+                });
+
+                // Thêm hình ảnh vào modal và hiển thị
+                modal.appendChild(enlargedImage);
+                document.body.appendChild(modal);
+            });
+        });
+    </script>
+</body>
+</html>
