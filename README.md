@@ -36,8 +36,8 @@
 - Huấn luyện mô hình
 - Đánh giá
 - Dự đoán thể loại
-Chi tiết được hiện trong file ,https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/blob/master/Audi_Training.ipynb
-- Chạy ứng ụng Flask [App.py], tải lên âm thanh mới và nhận dự đoán.
+Chi tiết được hiện trong file :https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/blob/master/Audi_Training.ipynb
+- Chạy ứng ụng Flask [app.py](#app), tải lên âm thanh mới và nhận dự đoán.
 ## Giao diện chương trình
 ![image](https://github.com/Sangqpham0102/Machine-learning-project/assets/119334855/8cc0a27a-b3ca-4112-b1ef-5a960ee8a3c9)
 ## Tham khảo
