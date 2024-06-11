@@ -3,3 +3,4 @@ Phiên bản numpy: 1.24.3
 Phiên bản tensorflow: 2.13.1   
 Phiên bản keras: 2.13.1        
 Phiên bản librosa: 0.10.2.post1
+Phiên bản Flask: 3.0.3
