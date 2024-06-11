@@ -23,7 +23,7 @@ Một số hình ảnh demeo chương trình
 ![image](https://github.com/Sangqpham0102/Machine-learning-project/assets/119334855/8cc0a27a-b3ca-4112-b1ef-5a960ee8a3c9)
 
 ## Tham khảo
-[1] Phân loại Việt-Truyền thống-Âm nhạc-Phân loại, https://github.com/LTPhat/Vietnamese-Traditional-Music-Classification
+[1] LTPhat/ Phân loại Việt-Truyền thống-Âm nhạc-Phân loại, https://github.com/LTPhat/Vietnamese-Traditional-Music-Classification
 
 [2] Thư viện Librosa, https://librosa.org/doc/latest/index.html
 
