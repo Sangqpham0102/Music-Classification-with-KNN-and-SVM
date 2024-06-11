@@ -18,7 +18,6 @@
 
 ## Cài đặt
 Để thiết lập dự án này, bạn cần cài đặt Python 3.7.10 và các thư viện cần thiết sau:
-
   numpy
   librosa
   tensorflow 
@@ -26,12 +25,11 @@
   pydub
   sklearn
   seaborn
-
-- 1. Clone repository:
+1. Clone repository:
   ```bash
    https://github.com/Sangqpham0102/Machine-learning-project.git
    cd project
-- 2. Cài đặc thư viện
+2. Cài đặc thư viện
 pip install -r requirements.txt
 ## Quá trình thực hiện
 - Chuẩn bị dữ liệu
