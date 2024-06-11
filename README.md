@@ -39,7 +39,7 @@ pip install -r requirements.txt
 - Dự đoán thể loại
 Chi tiết được hiện trong file ,Audi_Training.ipynb
 
-## Một số hình ảnh demeo chương trình
+## Giao diện chương trình
 ![image](https://github.com/Sangqpham0102/Machine-learning-project/assets/119334855/8cc0a27a-b3ca-4112-b1ef-5a960ee8a3c9)
 ## Tham khảo
 [1] LTPhat/ Phân loại Việt-Truyền thống-Âm nhạc-Phân loại, https://github.com/LTPhat/Vietnamese-Traditional-Music-Classification
