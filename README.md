@@ -1,7 +1,7 @@
 # Phân loại âm nhạc truyền thống Việt Nam
-Đô án cá nhân
-Phân loại âm nhạc dựa trên các đặc trưng âm sắc : Spectral Centroid, Rolloff, Flux, ZeroCrossing, LowEnergy và MFCC
-Hoàn thành 10/06/2024
+- Đô án cá nhân
+- Phân loại âm nhạc dựa trên các đặc trưng âm sắc : Spectral Centroid, Rolloff, Flux, ZeroCrossing, LowEnergy và MFCC
+- Hoàn thành 10/06/2024
 
 ## Tập dữ liệu sử dụng : Vietnam Traditional Music (5 genres)
 Bộ dữ liệu bao gồm các thư mục của 5 thể loại: cailuong catru chauvan cheo hatxam
