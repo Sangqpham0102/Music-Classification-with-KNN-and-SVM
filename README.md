@@ -18,13 +18,14 @@
 
 ## Cài đặt
 Để thiết lập dự án này, bạn cần cài đặt Python 3.7.10 và các thư viện cần thiết sau:
-  numpy
-  librosa
-  tensorflow 
-  matplotlib
-  pydub
-  sklearn
-  seaborn
+  ```bash
+      numpy
+      librosa
+      tensorflow 
+      matplotlib
+      pydub
+      sklearn
+      seaborn
 1. Clone repository:
    ```bash
    https://github.com/Sangqpham0102/Machine-learning-project.git
@@ -37,7 +38,7 @@ pip install -r requirements.txt
 - Huấn luyện mô hình
 - Đánh giá
 - Dự đoán thể loại
-Chi tiết được hiện trong file ,Audi_Training.ipynb
+Chi tiết được hiện trong file ,https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/blob/master/Audi_Training.ipynb
 
 ## Giao diện chương trình
 ![image](https://github.com/Sangqpham0102/Machine-learning-project/assets/119334855/8cc0a27a-b3ca-4112-b1ef-5a960ee8a3c9)
