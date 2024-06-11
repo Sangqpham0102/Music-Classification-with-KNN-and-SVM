@@ -28,9 +28,9 @@
 - Clone repository:
   ```bash
    https://github.com/Sangqpham0102/Machine-learning-project.git
-   cd project
+   cd Machine-learning-project
 -  Cài đặc thư viện
--  ```bash
+   ```bash
    pip install -r requirements.txt
 ## Quá trình thực hiện
 - Chuẩn bị dữ liệu
