@@ -18,7 +18,7 @@
 
 ## Cài đặt
 Để thiết lập dự án này, bạn cần cài đặt Python 3.7.10 và các thư viện cần thiết sau:
-    ```bash
+- ```bash
         numpy
         librosa
         tensorflow 
@@ -30,7 +30,6 @@
   ```bash
    https://github.com/Sangqpham0102/Machine-learning-project.git
    cd Machine-learning-project
--  Cài đặc thư viện
 ## Quá trình thực hiện
 - Chuẩn bị dữ liệu
 - Trích xuất đặc trưng
