@@ -25,12 +25,12 @@
   pydub
   sklearn
   seaborn
-1. Clone repository:
+- 1. Clone repository:
   ```bash
    https://github.com/Sangqpham0102/Machine-learning-project.git
    cd project
-2. Cài đặc thư viện
-pip install -r requirements.txt
+- 2. Cài đặc thư viện
+  pip install -r requirements.txt
 ## Quá trình thực hiện
 - Chuẩn bị dữ liệu
 - Trích xuất đặc trưng
