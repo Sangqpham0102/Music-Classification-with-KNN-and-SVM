@@ -1,30 +1,22 @@
-# Phân loại âm nhạc truyền thống Việt Nam
-- Đô án cá nhân
-- Phân loại âm nhạc dựa trên các đặc trưng âm sắc : Spectral Centroid, Rolloff, Flux, ZeroCrossing, LowEnergy và MFCC
-- Hoàn thành 10/06/2024
+# Phân loại Âm nhạc Truyền thống Việt Nam
 
-## Tập dữ liệu sử dụng : Vietnam Traditional Music (5 genres)
-Bộ dữ liệu bao gồm các thư mục của 5 thể loại: cailuong catru chauvan cheo hatxam
-Để biết thêm chi tiết vui lòng truy cập tại đường dẫn : https://www.kaggle.com/datasets/homata123/vntm-for-building-model-5-genres
-# Qúa trình thực hiện
+Dự án cá nhân này tập trung vào việc phân loại các thể loại âm nhạc truyền thống Việt Nam dựa trên các đặc trưng âm sắc như Spectral Centroid, Rolloff, Flux, Zero Crossing, Low Energy và MFCC. Dự án được hoàn thành vào ngày 10/06/2024.
 
-## Hướng dẫn
-Để chạy mã của dự án này, vui lòng làm theo các bước sau:
-- Cài đặt các thư viện, phụ thuộc cần thiết.
-  numpy 1.2.2
-  librosa
-  tensorflow 
-  matplotlib
-  pydub
-  sklearn
-  seaborn
+## Mục lục
+- [Giới thiệu](#giới-thiệu)
+- [Cài đặt](#cài-đặt)
+- [Sử dụng](#sử-dụng)
+- [Các phiên bản thư viện sử dụng](#các-phiên-bản-thư-viện-sử-dụng)
+- [Quá trình thực hiện](#quá-trình-thực-hiện)
+- [Tham khảo](#tham-khảo)
 
-## Một số hình ảnh demeo chương trình
-![image](https://github.com/Sangqpham0102/Machine-learning-project/assets/119334855/8cc0a27a-b3ca-4112-b1ef-5a960ee8a3c9)
+## Giới thiệu
+Dự án này nhằm xây dựng một mô hình máy học để phân loại các thể loại âm nhạc truyền thống Việt Nam bao gồm: Cailuong, Catru, Chauvan, Cheo, và Xam. Chúng tôi sử dụng các thư viện Python để xử lý âm thanh và học máy như librosa để trích xuất đặc trưng và TensorFlow/Keras để xây dựng và huấn luyện mô hình.
 
-## Tham khảo
-[1] LTPhat/ Phân loại Việt-Truyền thống-Âm nhạc-Phân loại, https://github.com/LTPhat/Vietnamese-Traditional-Music-Classification
+## Cài đặt
+Để thiết lập dự án này, bạn cần cài đặt Python 3.6+ và các thư viện cần thiết sau:
 
-[2] Thư viện Librosa, https://librosa.org/doc/latest/index.html
-
-[3] TensorFlow, https://www.tensorflow.org/
+1. Clone repository:
+   ```bash
+   git clone https://github.com/yourusername/music-genre-classification.git
+   cd music-genre-classification
