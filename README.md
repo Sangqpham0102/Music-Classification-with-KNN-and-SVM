@@ -5,7 +5,6 @@ Dự án cá nhân này tập trung vào việc phân loại các thể loại �
 ## Mục lục
 - [Giới thiệu](#giới-thiệu)
 - [Cài đặt](#cài-đặt)
-- [Sử dụng](#sử-dụng)
 - [Các phiên bản thư viện sử dụng](#các-phiên-bản-thư-viện-sử-dụng)
 - [Quá trình thực hiện](#quá-trình-thực-hiện)
 - [Tham khảo](#tham-khảo)
@@ -18,9 +17,20 @@ Dự án này nhằm xây dựng một mô hình máy học để phân loại c
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/yourusername/music-genre-classification.git
-   cd music-genre-classification
+   https://github.com/Sangqpham0102/Machine-learning-project.git
+   cd project
 2. Cài đặc thư viện
 pip install -r requirements.txt
+3. Quá trình thực hiện
+- Chuẩn bị dữ liệu
+- Trích xuất đặc trưng
+- Huấn luyện mô hình
+- Đánh giá
+- Dự đoán thể loại
+Chi tiết được hiện trong file ,
+## Tham khảo
+[1] LTPhat/ Phân loại Việt-Truyền thống-Âm nhạc-Phân loại, https://github.com/LTPhat/Vietnamese-Traditional-Music-Classification
 
-4. 
+[2] Thư viện Librosa, https://librosa.org/doc/latest/index.html
+
+[3] TensorFlow, https://www.tensorflow.org/
