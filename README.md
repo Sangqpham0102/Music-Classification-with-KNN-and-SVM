@@ -26,8 +26,8 @@
   pydub
   sklearn
   seaborn
+
 - 1. Clone repository:
-   ```bash
    https://github.com/Sangqpham0102/Machine-learning-project.git
    cd project
 - 2. Cài đặc thư viện
