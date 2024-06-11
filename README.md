@@ -1,4 +1,4 @@
-![image](https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/assets/119334855/775602c5-173c-490d-ba52-89317f215762)# Phân loại Âm nhạc Truyền thống Việt Nam
+# Phân loại Âm nhạc Truyền thống Việt Nam
 
 - Đô án môn học
 - Dự án này tập trung vào việc phân loại các thể loại âm nhạc truyền thống Việt Nam sử dụng hai thuật toán phân loại KNN và SVM
