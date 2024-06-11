@@ -1,4 +1,4 @@
-# Phân loại Âm nhạc Truyền thống Việt Nam
+![image](https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/assets/119334855/775602c5-173c-490d-ba52-89317f215762)# Phân loại Âm nhạc Truyền thống Việt Nam
 
 - Đô án môn học
 - Dự án này tập trung vào việc phân loại các thể loại âm nhạc truyền thống Việt Nam sử dụng hai thuật toán phân loại KNN và SVM
@@ -17,8 +17,8 @@
 - Chúng tôi sử dụng các thư viện Python để xử lý âm thanh và học máy như librosa để trích xuất đặc trưng và TensorFlow/Keras để xây dựng và huấn luyện mô hình.
 
 ## Cài đặt
-Để thiết lập dự án này, bạn cần cài đặt Python 3.7.10 và các thư viện cần thiết sau:
-- ```bash
+- Để thiết lập dự án này, bạn cần cài đặt Python 3.7.10 và các thư viện cần thiết sau:
+  ```bash
         numpy
         librosa
         tensorflow 
