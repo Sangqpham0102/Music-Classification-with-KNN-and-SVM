@@ -1,23 +1,23 @@
-# Phân loại Âm nhạc Truyền thống Việt Nam
+# Vietnamese Traditional Music Classification
 
-- Đô án môn học
-- Dự án này tập trung vào việc phân loại các thể loại âm nhạc truyền thống Việt Nam sử dụng hai thuật toán phân loại KNN và SVM
-- Dựa trên các đặc trưng âm sắc như Spectral Centroid, Rolloff, Flux, Zero Crossing, Low Energy và MFCC.
-- Hoàn thành 10/06/2024.
+- Course project
+- This project focuses on classifying various genres of Vietnamese traditional music using two classification algorithms: K-Nearest Neighbors (KNN) and Support Vector Machine (SVM).
+- Based on audio features such as Spectral Centroid, Rolloff, Flux, Zero Crossing, Low Energy, and MFCC.
+- Completed on 10/06/2024.
 
-## Mục lục
-- [Giới thiệu](#giới-thiệu)
-- [Cài đặt](#cài-đặt)
-- [Quá trình thực hiện](#quá-trình-thực-hiện)
-- [Giao diện chương trình](#giao-diện-chương-trình)
-- [Tham khảo](#tham-khảo)
+## Table of Contents
+- [Introduction](#introduction)
+- [Setup](#setup)
+- [Implementation Process](#implementation-process)
+- [Program Interface](#program-interface)
+- [References](#references)
 
-## Giới thiệu
-- Dự án này nhằm xây dựng một mô hình máy học để phân loại các thể loại âm nhạc truyền thống Việt Nam bao gồm: Cailuong, Catru, Chauvan, Cheo, và Xam.
-- Chúng tôi sử dụng các thư viện Python để xử lý âm thanh và học máy như librosa để trích xuất đặc trưng và TensorFlow/Keras để xây dựng và huấn luyện mô hình.
+## Introduction
+- This project aims to build a machine learning model to classify genres of Vietnamese traditional music, including Cai Luong, Ca Tru, Chau Van, Cheo, and Xam.
+- We utilize Python libraries for audio processing and machine learning, such as librosa for feature extraction and TensorFlow/Keras for model construction and training.
 
-## Cài đặt
-- Để thiết lập dự án này, bạn cần cài đặt Python 3.7.10 và các thư viện cần thiết sau:
+## Setup
+- To set up this project, you need to install Python 3.7.10 and the following necessary libraries:
   ```bash
   numpy
   librosa
@@ -26,23 +26,27 @@
   pydub
   sklearn
   seaborn
-- Clone repository:
+- Clone the repository:
   ```bash
-   https://github.com/Sangqpham0102/Machine-learning-project.git
-   cd Machine-learning-project
-## Quá trình thực hiện
-- Chuẩn bị dữ liệu
-- Trích xuất đặc trưng
-- Huấn luyện mô hình
-- Đánh giá
-- Dự đoán thể loại
-Chi tiết được hiện trong file :[Audi_training](https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/blob/master/Audi_Training.ipynb)
--  Chạy ứng dụng Flask [app.py](https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/blob/48674b6d78a589024313513d7f1d16a6748e715c/app.py), tải lên âm thanh mới và nhận dự đoán.
-## Giao diện chương trình
+  https://github.com/Sangqpham0102/Machine-learning-project.git
+  cd Machine-learning-project
+
+## Implementation Process
+- Prepare the data
+- Extract features
+- Train the model
+- Evaluate
+- Predict genre
+Details are provided in the file: [Audi_training](https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/blob/master/Audi_Training.ipynb)
+
+- Run the Flask application [app.py](https://github.com/Sangqpham0102/Music-Classification-with-KNN-and-SVM/blob/48674b6d78a589024313513d7f1d16a6748e715c/app.py), upload new audio, and receive predictions.
+
+## Program Interface
 ![image](https://github.com/Sangqpham0102/Machine-learning-project/assets/119334855/8cc0a27a-b3ca-4112-b1ef-5a960ee8a3c9)
-## Tham khảo
+
+## References
 [1] LTPhat/ Phân loại Việt-Truyền thống-Âm nhạc-Phân loại, https://github.com/LTPhat/Vietnamese-Traditional-Music-Classification
 
-[2] Thư viện Librosa, https://librosa.org/doc/latest/index.html
+[2] Librosa Library, https://librosa.org/doc/latest/index.html
 
 [3] TensorFlow, https://www.tensorflow.org/
